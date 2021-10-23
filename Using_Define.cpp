@@ -13,7 +13,7 @@ cout<<v[i]<<endl; \
 
 int main(){
     cout<<Number<<endl;
-    int arr[5] = {1,2,3,4,5};
+    int arr[9] = {1,2,3,4,4,5,5};
     Message(5,arr);
 }
 
