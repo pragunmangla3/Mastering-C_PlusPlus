@@ -81,22 +81,52 @@ int main(){
 // a *= b + c; means a = a* (b+c);
 
 
-// switch (character){
-//     case '1' : cout<<"case 1";
-//                break;
+// #include<cctype> ->function for testing characters and converting character case
+// isalpha(c) ->true if c is a letter.
+// isdigit(c) ->true if c is a digit.
+// isalnum(c) ->true if c is a letter or digit.
+// ispunct(c) ->true if c is a punctuation character.
+// islower(c) ->true if c is a lowercase letter.
+// isprint(c) ->true if c is a printable character
+// isupper(c) ->true if c is a uppercase letter.
+// isspace(c) ->true if c is a whitespace.
 
-//     default : cout<<"default case";
-//                 break;
-// }
+// tolower(c) -> returns lowercase of c
+// toupper(c) -> returns uppercase of c
+
+// C- STYLE STRING -> or character array -> always have a null character in the end, ie these all are null terminating strings 
+// char my_name[8]; then, my_name = "frank"; // error
+// char my_name[8]; then, strcpy(my_name,"frank"); // OK
+// char name[50]; cin.getline(name,50); -> to get input for C-style strings. -> otherwise spaces will not be read.
+// size_t is a data type (unsigned data type, so i can go forward without worring for out of bounds) for(size_t i{0};i<strlen(arr);i++)
+// strcpy(a,b) -> copy b to a (internally copies 1 by 1 till it hits NULL)
+// strcat(a, "adding this to a") -> concatination
+// strcmp(a,b) -> compare a and b, if they are same, return 0. otherwise -1 (if first string comes lexographically before 2nd string) or +ve number otherwise.
 
 
+
+// strings in C++
+// string s1 {"frank"};
+// you cant concatinate 2 C-style literaals. Ex -> sentence = "C++" + "is powerful"; -> this is illegal.
+// part1 {"C++"} -> sentence = part1 + "powerful"; -> legal
+// you can use strings as vectors. .at() method is really good (you wont go out of bounds).
+// comparison between string is lexographical comparison (character by character), not by length .
+// object.substr(strt_index, length) -- ex) string s1 {"This is a test"}; s1.substr(0,4)-> "This".
+// object.find(search_string) -> gives the starting index of the substring in the object.
+// string s1 {"This is a test"}; s1.find("is")-> 2. s1.find("is",3) ->5 (second value is the index we want to start search from). if nothing is found -> end position is returned.
+// string s1 {"This is a test"}; s1.erase(0,5) -> //is a test
+// s1.length() -> return length of the string
+// always use getline(cin,s1); -> this reads entire string (space also), whereas cin>>s; -> stops at space.
+// geline(cin,s,'x) -> this time third value is delemeter. we will stop reading as soon as we see that delemeter character(and that last character will not be included).
+ // Remember strings are objects in C++
+// 2 C-style strings cant be concatinated with + operator
 
 
 // QUIZ IMPORTANT - 
 
 // if you use a keyword as an identifier, the program will not compile
-
-
+// if(condition); -> a ; at the end of an if condition means, to do nothing -> treat it as not even present
+// Char name[6] can only contain "larry", cuz the last index will be occupied by '\0'
 
 
 
